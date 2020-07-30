@@ -1,0 +1,117 @@
+//VARIABLES
+$first: #686868;
+$second: #85b1cc;
+$third: #ababab;
+$fourth: #dadada;
+$fifth: #045c5b;
+$sixth: #262626;
+$seventh: #c78177;
+$eighth: #bf9baf;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #030c26;
+  position: relative;
+}
+* {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#logo {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+#calculatorContainer {
+  height: 600px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  position: absolute;
+
+  #calculator {
+    height: 95%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1.5fr repeat(4, 1fr) 0.1fr;
+    gap: 2%;
+  }
+}
+#calculator,
+#calculatorContainer {
+  background-color: $sixth;
+}
+#display {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  background-color: $fifth;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1rem;
+  overflow: hidden;
+
+  #number,
+  #action {
+    color: $fourth;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: right;
+  }
+}
+#sumBtn {
+  background-color: $seventh;
+  border-color: $seventh;
+}
+#copywriter {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  color: $fourth;
+  text-align: right;
+  font-size: 0.7rem;
+}
+.extBtn,
+#clear {
+  background-color: $eighth;
+  border-color: $eighth;
+}
+.buttons {
+  cursor: pointer;
+  color: $fourth;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.digitsBtn,
+#dot {
+  background-color: $first;
+  border-color: $first;
+}
+#sum,
+.actionBtn {
+  background-color: $second;
+  border-color: $second;
+}
+@media (max-width: 600px) and (orientation: portrait) {
+  #calculatorContainer {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+@media (max-width: 800px) and (orientation: landscape) {
+  #calculatorContainer {
+    height: 100vh;
+    width: 100vw;
+  }
+}
